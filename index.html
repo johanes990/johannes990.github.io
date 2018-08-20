@@ -1,0 +1,45 @@
+<DOCTYPE HTML>
+<html>
+<head>
+    <script>
+        function perform0peration(udregn) {
+         var x = parseInt(document.getElementById('text1').value);
+         var y = parseInt(document.getElementById('text2').value); 
+         var result;
+            if (udregn == "+")
+                result = x + y;
+            else if (udregn == "-")
+                result = x - y;
+            else if (udregn == "*")
+                result = x * y;
+              else if (udregn == "P")
+                result = y / x * 100 + '%';
+            else if (udregn == "/")
+                result = x / y;
+                 if (y == 0)
+                    result = "Hallo du er dum";
+           else if (udregn == "P")
+               result = y / x * 100 + '%'; 
+            
+         document.getElementById('giver').innerHTML = result;
+        
+        }
+    
+    
+    </script>
+</head>
+
+    <body> <center>
+        <input type="text" id="text1" />
+        <button onclick="perform0peration('+')"> + </button>
+        <button onclick="perform0peration('-')"> - </button>
+        <button onclick="perform0peration('*')"> * </button>
+        <button onclick="perform0peration('/')"> / </button>
+        <button onclick="perform0peration('P')"> P </button>
+        <input type="text" id="text2" />
+        <p> Det giver: </p>  
+        <p id="giver"> </p>
+</center>
+    </body>
+    
+</html>
